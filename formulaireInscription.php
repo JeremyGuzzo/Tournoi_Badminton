@@ -6,17 +6,11 @@
  
 <?php
 
-  //------ récupération des données tournois -----------------
+  //------ récupération des données regions -----------------
   $listeRegions = getRegions();
   
 
   $databasehandler = connectionBDD();
-
-  //------ récupération des données régions -----------------
-  $statementRegion = $databasehandler->prepare("SELECT * FROM Regions ORDER BY nom");
-  $statementRegion->execute();
-  $tabRegions = $statementRegion->fetchAll(PDO::FETCH_ASSOC);
-  $statementRegion->closeCursor();
 
   //------ récupération des données département -------------
   $statementDepartement = $databasehandler->prepare("SELECT * FROM Departements ORDER BY nom");
@@ -69,7 +63,7 @@
                   <label for="exampleFormControlSelect1">Région</label>
                   <select class="form-control" id="exampleFormControlSelect1">
                     <option disabled selected>Selectionner</option>
-                    <?php foreach($tabRegions as $result) { ?>
+                    <?php foreach($listeRegions as $result) { ?>
                       <option value="<?=$result['nom']?>">
                         <?=$result['nom']?>
                       </option>

@@ -1,9 +1,9 @@
 <?php include "header.php" ?>
 
-    <main>
+    <div class="main">
       <?php
         include "Main.php";
-      ?>
-    </main>
+      ?>  
+    </div>
     <?php include "footer.php" ?>
   </div>
