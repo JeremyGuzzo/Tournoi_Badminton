@@ -35,6 +35,7 @@
     $statementNomRegionDepartement->closeCursor();
     return $tabNomRegionDepartement;
   }
+  // test commit github
 
   function getRegions(){
     $databasehandler = connectionBDD();
