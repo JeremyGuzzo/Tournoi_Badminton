@@ -1,6 +1,6 @@
 <?php include "header.php" ?>
 
-    <div class="main">
+    <div class=" main">
       <?php
         include "Main.php";
       ?>  
